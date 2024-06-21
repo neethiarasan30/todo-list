@@ -7,7 +7,7 @@ import { SearchItems } from './components/SearchItems';
 
 function App() {
 
-  let[items,setItems] = useState(JSON.parse(localStorage.getItem("todo-list")))
+  let[items,setItems] = useState(JSON.parse(localStorage.getItem("todo-list")) || [])
 
   let[newItems, setNewItems] = useState([])
 
