@@ -52,7 +52,7 @@ function App() {
         <Header/>
         <AddItems newItems={newItems} setNewItems={setNewItems} handleSubmit={handleSubmit}/>
         <SearchItems searchItem={searchItem} setSearchItem={setSearchItem}/>
-        <Content items={items} handleChange={handleChange} handleDelete={handleDelete}/>
+        <Content items={items.filter((item) => {return (item.item).includes(searchItem)})} handleChange={handleChange} handleDelete={handleDelete}/>
         <Footer itemsLength={items.length}/>
       </div>
   );
